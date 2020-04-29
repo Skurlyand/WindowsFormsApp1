@@ -215,22 +215,23 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            xinit = Convert.ToDouble(textBox1.Text);
+            double.TryParse(textBox1.Text, out xinit);
+                      
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            tinit = Convert.ToDouble(textBox2.Text);
+            double.TryParse(textBox2.Text, out tinit);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            v = Convert.ToDouble(textBox3.Text);
+            double.TryParse(textBox3.Text, out v);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            acc = Convert.ToDouble(textBox4.Text);
+            double.TryParse(textBox4.Text, out acc);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,6 +243,45 @@ namespace WindowsFormsApp1
             if (comboBox1.SelectedIndex == 1)
             {
                 choice = 2;
+            }
+
+        }
+
+        private void textBox1_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
+            {
+                e.Handled = true;
+            }
+     
+        }
+
+        private void textBox2_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
+            {
+                e.Handled = true;
             }
         }
     }

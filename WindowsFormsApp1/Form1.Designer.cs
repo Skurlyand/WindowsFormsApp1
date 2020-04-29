@@ -40,14 +40,15 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // glControl1
             // 
             this.glControl1.BackColor = System.Drawing.Color.Black;
-            this.glControl1.Location = new System.Drawing.Point(417, 28);
+            this.glControl1.Location = new System.Drawing.Point(436, 74);
             this.glControl1.Name = "glControl1";
-            this.glControl1.Size = new System.Drawing.Size(470, 397);
+            this.glControl1.Size = new System.Drawing.Size(440, 370);
             this.glControl1.TabIndex = 0;
             this.glControl1.VSync = false;
             this.glControl1.Load += new System.EventHandler(this.glControl1_Load);
@@ -114,6 +115,7 @@
             this.textBox1.Size = new System.Drawing.Size(133, 20);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -122,6 +124,7 @@
             this.textBox2.Size = new System.Drawing.Size(133, 20);
             this.textBox2.TabIndex = 13;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox3
             // 
@@ -130,6 +133,7 @@
             this.textBox3.Size = new System.Drawing.Size(133, 20);
             this.textBox3.TabIndex = 14;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
@@ -138,6 +142,7 @@
             this.textBox4.Size = new System.Drawing.Size(133, 20);
             this.textBox4.TabIndex = 15;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // comboBox1
             // 
@@ -151,11 +156,21 @@
             this.comboBox1.TabIndex = 16;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(444, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(432, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Здесь, верхняя точка - бесконечное будущее, нижняя точка - бесконечное прошлое";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 456);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -190,6 +205,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
